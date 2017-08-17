@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.calculator.js"></script>
+    <link href="css/bootstrap-3.3.7.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        span{
+            color: #000;
+            font-size:15px;
+        }
+        .fc-red{
+            color: #ff0000;
+        }
+        .calculator{
+            display: inline-block;
+        }
+        .addBtn,
+        .decBtn{
+            background: #1bc4c4;
+            border: none;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+        }
+        .addBtn:disabled,
+        .decBtn:disabled,
+        input[type=button]:disabled{
+            background: #CCCCCC !important;
+        }
+        .numText,
+        input[type=numeber],
+        input[type=text]{
+            text-align: center;
+            width: 60px;
+            padding: 3px 8px;
+        }
+        .add{
+            margin-left: 20px;
+            color: #2eb7b7;
+        }
+        .add:hover{
+            color: #2eb7ff;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+	<table>
+		<tr>
+			<td>
+				<span class="fc-red">*</span>
+    			<span>数量：</span>
+			</td>
+			<td>
+				<div class="calculator" id="calculator1">
+			        <input class="decBtn" type="button" value="-">
+			        <input class="numText" type="text" value="0">
+			        <input class="addBtn" type="button" value="+">
+			    </div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<div class="calculator2" id="calculator2">
+			        <input class="decBtn" type="button" value="-">
+			        <input class="numText" type="text" value="0">
+			        <input class="addBtn" type="button" value="+">
+			    </div>
+			</td>
+		</tr>
+	</table>
+    
+    
+    
+    <script>
+        $('#calculator1').calculator({
+            width: 200,
+            btnBgColor: "red"
+        })
+        $('#calculator2').calculator({
+            width: 200
+        })
+    </script>
+</div>
+</body>
+</html>
