@@ -37,12 +37,16 @@
                 _decBtn.css({
                     "background": defaultOptions.btnBgColor
                 })
+                
                 /**
                  *  btn 设置只读/失效
                  *  一、_decBtn.attr("readonly", "readonly");.
                  *  二、_decBtn.prop("disabled",true)
                  */
-                _decBtn.prop("disabled", true);
+                
+                if(defaultOptions.btnBgColor>0){
+	               	_decBtn.prop("disabled", true);
+                }
             },
             numKeyUp: function () {
                 var numValue = _numText.val();
